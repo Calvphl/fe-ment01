@@ -1,38 +1,152 @@
-.App {
-  text-align: center;
+.bg-image{
+  position: relative;
+  height: 652px;
+  width: auto;
+  background-image: url(./assets/bg-desktop.svg);
+  background-size:contain;
+  background-repeat: no-repeat;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo{
+  position: absolute;
+  top: 40px;
+  left: 50px;
+  width: 200px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.content{
+  position: absolute;
+  z-index: 10;
+  top: 160px;
   display: flex;
-  flex-direction: column;
+  padding: 0 200px 0 60px;
+  justify-content:space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.content img{
+  width: 600px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.content-text{
+  position: relative;
+  bottom: 50px;
+  font-family: var(--font-family);
+  width: 440px;
+  color: var(--font-color);
+  margin-left: 60px;
+}
+
+.content-text h1{
+  font-weight:800;
+  font-size: 2.5rem;
+}
+
+.content-text p{
+  line-height: 25px;
+}
+
+.btn{
+  padding: 15px 50px;
+  border: none;
+  background-color: #fff;
+  color: #674bb1;
+  border-radius: 50px;
+  box-shadow: 0px 4px 15px -4px #35104F;
+}
+
+.btn:hover{
+  cursor: pointer;
+  background-color: #d67fda;
+  color: #fff;
+  transition: .2s;
+}
+
+.social{
+  display: flex;
+  /* justify-content: flex-end; */
+  position: absolute;
+  top: 400px;
+  left: 1000px;
+}
+
+.social a{
+  margin-right: 3px;
+  color: #fff;
+}
+
+.social a:hover{
+  color: #d67fda;
+  transition: .2s;
+}
+
+@media screen and (max-width: 375px){
+  .logo{
+    top: 25px;
+    left: 25px;
+    width: 150px;
+    position: absolute;
   }
-  to {
-    transform: rotate(360deg);
+
+  .bg-image{
+    opacity: 0;
+  }
+
+  .bg-image-mobile{
+    position: absolute;
+    background-image: url(./assets/bg-mobile.svg);
+    width: 100%;
+    background-repeat: no-repeat;
+    height: fit-content;
+    height: 100%;
+    top: 0;
+  }
+
+  .content{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  .content img{
+    position: relative;
+    bottom: 30px;
+  }
+
+  .content-text{
+    text-align: center;
+    margin: 50px 0 0 0;
+    width: 80%;
+  }
+
+  .content-text h1{
+    line-height: 40px;
+    font-size: 1.6rem;
+  }
+
+  .content-text p{
+    font-size: 17.3px;
+  }
+
+  .content img{
+    width: 80%;
+    height: fit-content;
+  }
+
+  .btn{
+    width: 80%;
+  }
+
+  .social {
+    position: relative;
+    margin-top: 10px;
+    left: 0;
+    top: 0;
+  }
+
+  .social a {
+    margin-right: 3px;
+    color: #fff;
   }
 }
